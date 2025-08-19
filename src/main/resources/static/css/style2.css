@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: #fcfeff;
+}
+
+.wrapper{
+  margin: 10px;
+} 
+.wrapper .top_navbar{
+  width: calc(100% - 20px);
+  height: 60px;
+  display: flex;
+  position: fixed;
+  top: 10px;
+}
+
+.wrapper .top_navbar .hamburger{
+  width: 70px;
+  height: 100%;
+  background: #cecaca; /* panel pequeño */
+  padding: 15px 17px;
+  border-top-left-radius: 20px;
+  cursor: pointer;
+}
+
+.wrapper .top_navbar .hamburger div{
+  width: 35px;
+  height: 4px;
+  background: #ffffff;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.wrapper .top_navbar .top_menu{
+  width: calc(100% - 70px);
+  height: 100%;
+  background: #ffffff;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.wrapper .top_navbar .top_menu .logo{
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.wrapper .top_navbar .top_menu ul{
+  display: flex;
+}
+
+.wrapper .top_navbar .top_menu ul li a{
+  display: block;
+  margin: 0 10px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #060606;
+  border-radius: 50%;
+  color: #0a0a0a;
+}
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-productos th, .tabla-productos td {
+  padding: 1px;
+  text-align: left;
+  border: none; /* Elimina los bordes de las celdas */
+}
+
+.tabla-productos th {
+  background-color: #d4d0d0;
+  font-weight: bold;
+}
+
+.tabla-productos tr {
+  border-bottom: 1px solid #dddcdc; /* Agrega un borde inferior a cada fila */
+}
+
+.tabla-productos tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla-productos tr:hover {
+  background-color: #efeeee;
+}
+
+.btn-listo {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  background-color: #FF8000;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-listo:hover {
+  background-color: #e99746;
+  opacity: 0.9;
+}
+
+.btn-eliminar, .btn-modificar {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #ff5c5c;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-modificar {
+  background-color: #4CAF50;
+}
+
+.btn-eliminar:hover, .btn-modificar:hover {
+  opacity: 0.8;
+}
+
+.btn-eliminar, .btn-modificar {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #ff5c5c;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-modificar {
+  background-color: #4CAF50;
+}
+
+.btn-eliminar:hover, .btn-modificar:hover {
+  opacity: 0.8;
+}
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.barra-busqueda input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.barra-busqueda a {
+  margin-left: 8px;
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+}
+.notificaciones {
+  position: relative;
+}
+.punto-rojo {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.menu-notificaciones {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 200px;
+  display: none;
+  z-index: 1000;
+}
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.barra-busqueda input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.barra-busqueda a {
+  margin-left: 8px;
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+}
+.menu-notificaciones p {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+.wrapper .top_navbar .top_menu ul li a:hover{
+  background: #b6b3b3;
+  color: #1d1b1b;
+}
+
+.wrapper .top_navbar .top_menu ul li a:hover i{
+  color: #fff;
+}
+
+.wrapper .sidebar{
+  position: fixed;
+  top: 70px;
+  left: 10px;
+  background: #FF8000; /*panel grande*/
+  width: 200px;
+  height: calc(100% - 80px);
+  border-bottom-left-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 20px;
+    color: #ffffffef;
+    position: relative;
+    margin-bottom: 1px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.wrapper .sidebar ul li a:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #e95703;
+  display: none;
+}
+
+.wrapper .sidebar ul li a span.icon{
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.wrapper .sidebar ul li a span.title{
+  display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+  background: #bcbbbb;
+  color: #fff;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+  display: block;
+}
+
+.wrapper .main_container{
+  width: (100% - 200px);
+  margin-top: 70px;
+  margin-left: 200px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .main_container ,content-1{
+  background: #d4d0d0;
+  margin-bottom: 40px;
+  padding:30px;
+  font-size: 15px;
+  line-height: 73px;
+  left: 7px;
+}
+
+.wrapper.collapse .sidebar{
+  width: 70px;
+}
+
+.wrapper.collapse .sidebar ul li a{
+  text-align: center; 
+}
+
+.wrapper.collapse .sidebar ul li a span.icon{
+  margin: 0;
+}
+
+.wrapper.collapse .sidebar ul li a span.title{
+  display: none;
+}
+
+.wrapper.collapse .main_container{
+  width: (100% - 70px);
+  margin-left: 70px;
+}
+.form-group label {
+  max-width: 140px; /* Ancho máximo de la etiqueta */
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle; /* Alineación vertical al medio */
+  margin-right: 25px;
+  white-space: nowrap; /* Evita el salto de línea */
+  font-size: 16px; /* Tamaño de la fuente */
+  color: rgb(0, 0, 0); /* Color del texto */
+}
+
+.form-group input {
+  vertical-align: middle; /* Alineación vertical al medio */
+  font-size: 16px; /* Tamaño de la fuente */
+}
+.btn-agregar {
+  font-size: 20px; /* Tamaño de la fuente para los botones */
+  background-color: #FF8000; /* Color de relleno */
+  border: 2px solid #FF8000; /* Borde de color naranja */
+  color: white; /* Color del texto */
+  border-radius: 5px; /* Esquinas redondeadas */
+  transition: background-color 0.3s; /* Transición suave */
+  transform: translateX(750px);
+}
+
+.btn-agregar:hover {
+  background-color: #f7a554; /* Tono más bajo de naranja al pasar el mouse */
+}
+
+.btn-limpiar {
+  font-size: 20px; /* Tamaño de la fuente para los botones */
+  background-color: rgb(255, 255, 255); /* Color de relleno */
+  border: 2px solid #FF8000; /* Borde de color naranja */
+  color: #FF8000; /* Color del texto */
+  border-radius: 5px; /* Esquinas redondeadas */
+  transition: background-color 0.3s; /* Transición suave */
+  transform: translateX(570px);
+}
+
+.btn-limpiar:hover {
+  background-color: #fafafa; /* Tono más bajo de naranja al pasar el mouse */
+}
+
+label {
+  font-size: 10px; /* Tamaño de la fuente general */
+  color: rgb(6, 6, 6); /* Color del texto general */
+}
+.content-2 {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(218, 214, 214, 0.1);
+  display: none;
+}
+
+.content-2 h1 {
+  color: #d5cfcf;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#lista-productos {
+  list-style-type: none;
+  padding: 0;
+}
+
+#lista-productos li {
+  background-color: #e13a3a;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#lista-productos li button {
+  background-color: #dc3545;
+  color: #b7b4b4;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#lista-productos li button:hover {
+  background-color: #c82333;
+}
+
+.content-1 {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px; /* Establece un ancho máximo para reducir el tamaño del contenedor */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  height: 700px; 
+  display: block;
+}
+
+.content-1 h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.content-1 form {
+  margin-bottom: 20px;
+}
+
+
+
+.form-group {
+  display: flex; /* Hacer que los elementos dentro de form-group estén en una fila */
+  justify-content: space-between; /* Espacio entre columnas */
+  margin-bottom: -10px; /* Espacio entre grupos de formulario */
+}
+
+.form-group-item {
+  width: 48%; /* Establecer un ancho para cada columna */
+}
+
+.form-group-item label {
+  display: block; /* Asegurar que las etiquetas estén en su propia línea */
+  margin-bottom: -40px; /* Espacio entre la etiqueta y el campo de entrada */
+}
+
+.form-group-item input,
+.form-group-item textarea {
+  width: 100%; /* Asegurarse de que el campo de entrada ocupe el 100% del contenedor */
+  padding: 8px; /* Relleno para el campo de entrada */
+  border-radius: 5px; /* Bordes redondeados para el campo de entrada */
+  border: 1px solid #ced4da; /* Borde para el campo de entrada */
+}
+
+.full-width {
+  width: 100%; /* Ancho completo para los elementos que deben ocupar dos columnas */
+}
+
+
+
+
+
+
+
+
+
+
+#lista-productos li {
+   /* Ancho deseado para los elementos de la lista */
+  font-size: 14px; /* Reducir el tamaño de la fuente si es necesario */
+}
+
+.table-container {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 10px; /* Agregar margen inferior a la tabla */
+}
+
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  border-bottom: 1px solid #d4d0d0; /* Línea horizontal roja */
+  padding: 1px;
+}
+
+.table-container th {
+  text-align: left;
+  background-color: #d4d0d0;
+  font-weight: bold;
+}
+
+.table-container tr:nth-child(even) {
+  background-color: #ffffff; /* Color de fondo para filas pares */
+}
+
+.table-container tr:hover {
+  background-color: #efeeee; /* Efecto hover */
+}
+
+.table-container tr:not(:last-child) td {
+  border-bottom: 1px solid #d4d0d0; /* Añade borde rojo a todas menos la última fila */
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-eliminar {
+  background-color: #FF8000; /* Color de fondo para el botón Eliminar */
+  color: #fff; /* Color del texto para el botón Eliminar */
+  padding: 5px 10px; /* Padding del botón Eliminar */
+  margin-bottom: 50px;
+  transform: translateY(20px);
+
+}
+
+
+.btn-modificar {
+  background-color: #f9f9f9;
+  color: #FF8000;
+  padding: 0.25rem 0.5rem; /* Ajusta el tamaño del botón */
+  font-size: 0.875rem; /* Tamaño de la fuente para "sm" */
+  border: 2px solid #FF8000;
+  border-radius: 4px;
+  cursor: pointer;
+  transform: translateY(20px);
+  margin-bottom: 50px;
+  transition: background-color 0.2s ease;
+  margin-right: 0.5rem; /* Espaciado "mr-2" */
+}
+
+.btn-salida{
+  background-color: #f9f9f9;
+  color: #FF8000;
+  padding: 0.25rem 0.5rem; /* Ajusta el tamaño del botón */
+  font-size: 0.875rem; /* Tamaño de la fuente para "sm" */
+  border: 2px solid #FF8000;
+  border-radius: 4px;
+  cursor: pointer;
+  transform: translateY(20px);
+  margin-bottom: 50px;
+  transition: background-color 0.2s ease;
+  margin-right: 0.5rem; 
+}
+
+.button:hover {
+  background-color: rgba(255, 128, 0, 0.9);
+}
+
+.formulario-modificar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.formulario-modificar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.formulario-modificar label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  width: 150px;
+}
+
+.formulario-modificar input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formulario-modificar button {
+  background-color: #f9f9f9;
+  color: #FF8000;
+  padding: 0.25rem 0.5rem; /* Ajusta el tamaño del botón */
+  font-size: 0.875rem; /* Tamaño de la fuente para "sm" */
+  border: 2px solid #FF8000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 0.5rem; 
+}
+
+.formulario-modificar button:first-of-type {
+  background-color: #ffffff; /* Verde para Guardar Cambios */
+}
+
+.formulario-modificar button:last-of-type {
+  background-color: #ffffff; /* Rojo para Cancelar */
+}
+
+
+
+
+.body1 {
+  font-family: Arial, sans-serif;
+}
+
+.mb-3 {
+  margin-left: 630px; 
+  margin-bottom: 20px;
+  
+}
+
+.btn-danger{
+  background-color: #f9f9f9;
+  color: #FF8000;
+  padding: 0.25rem 0.5rem; /* Ajusta el tamaño del botón */
+  font-size: 0.875rem; /* Tamaño de la fuente para "sm" */
+  border: 2px solid #FF8000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 0.5rem; 
+}
+
+.btn-success{
+  background-color: #f9f9f9;
+  color: #FF8000;
+  padding: 0.25rem 0.5rem; /* Ajusta el tamaño del botón */
+  font-size: 0.875rem; /* Tamaño de la fuente para "sm" */
+  border: 2px solid #FF8000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 0.5rem; 
+}
+
+.btn-primary{
+  background-color: #f9f9f9;
+  color: #FF8000;
+  padding: 0.25rem 0.5rem; /* Ajusta el tamaño del botón */
+  font-size: 0.875rem; /* Tamaño de la fuente para "sm" */
+  border: 2px solid #FF8000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 0.5rem; 
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.table {
+  margin: auto;
+  width: 70%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ddd; /* Línea de separación */
+  padding: 8px;
+}
+
+.container-5{
+  width: 80%;   /* Ajusta el ancho según sea necesario */
+  height: 500px; /* Ajusta el alto según sea necesario */
+  margin: 0 auto;
+  background-color: #fcfafa;
+  display: none;
+
+}
+
+
+.btn-back {
+  background-color: #ffffff;
+  color: #FF8000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #FF8000;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.btn-back i {
+  margin-right: 8px;
+}
+
+.btn-back:hover {
+  background-color: #f6c99c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.formulario-salida {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+.formulario-salida h3 {
+  margin-top: 0;
+}
+
+.formulario-salida input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.formulario-salida label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  width: 150px;
+}
+.formulario-salida button {
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.btn-salida {
+  background-color:  #FF8000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+
+.formulario-salida button {
+  background-color: #f9f9f9;
+  height: 30px;
+  color: #FF8000;
+  padding: 0.25rem 0.5rem; /* Ajusta el tamaño del botón */
+  font-size: 0.875rem; /* Tamaño de la fuente para "sm" */
+  border: 2px solid #FF8000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 0.5rem; 
+  transform: translateY(63px); 
+}
+
